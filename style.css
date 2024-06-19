@@ -1,162 +1,265 @@
-/*Header*/
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
-:root{
-    --nav-background:#FAFAFA;
+
+/* Root variables for color scheme */
+:root {
+    --nav-background: #FAFAFA;
     --background: #206500;
-    --Headline: #7CCB1B;
-    --sub-text:#FAFAFA;
+    --headline: #7CCB1B;
+    --sub-text: #FAFAFA;
 }
 
-body{
+/* Global styles */
+body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.header_logo{
+
+header, .section_div, .footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Header styles */
+.header_logo {
     width: 95px;
     height: 91px;
 }
-header{
+
+header {
     height: 100px;
-    width: 100%;
     background-color: var(--nav-background);
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
-nav ul li{
+
+nav ul li {
     padding: 10px 50px;
 }
-nav ul li a{
+
+nav ul li a {
     font-family: "Sedan SC", serif;
     font-size: 32pt;
-    color: var(--Headline);
+    color: var(--headline);
     position: relative;
     text-decoration: none;
     text-shadow: 1px 1px 2px black;
 }
+
 nav ul li a::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: var(--Headline);
+    background-color: var(--headline);
     bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .25s ease-in-out;
 }
-  
+
 nav ul li a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
+
+/* Headline and subtitle styles */
 .headline {
     text-align: center;
     margin-left: 25px;
     font-family: "Sedan SC", serif;
     font-size: 48pt;
     text-shadow: 2px 2px 5px black;
-    color: var(--Headline);
+    color: var(--headline);
 }
-.subtitle{
+
+.subtitle {
     width: 589px;
-    text-align:start;
+    text-align: start;
     font-family: "Sedan", serif;
     font-size: 20pt;
     color: var(--sub-text);
 }
-.text_div{
+
+.text_div {
     text-decoration: double;
 }
 
-.section_div{
+/* Section styles */
+.section_div {
     margin: 200px;
+    
 }
-/*Home*/
-.text_img{
-    justify-content:center;
+
+.text_img {
+    justify-content: center;
     display: flex;
     align-items: center;
 }
-.section_pic{
+
+.section_pic {
     align-self: center;
 }
-.img_div{
+
+.img_div {
     width: 466px;
 }
-/*Grafic*/
-#myChart{
+
+/* Graphic styles */
+#myChart {
     align-self: center;
 }
-#chart_box{
+
+#chart_box {
     display: flex;
     justify-content: center;
 }
-#grafic{
+
+#grafic {
     width: 850px;
     height: 400px;
     background-color: var(--nav-background);
     border-radius: 50px;
     margin-bottom: 50px;
 }
-#check_boxes{
+
+#check_boxes {
     padding-left: 60px;
 }
-.dropdown-container{
+
+.dropdown-container {
     display: flex;
     justify-content: center;
 }
-.year_selection{
+
+.year_selection {
     padding: 50px;
 }
-label{
+
+label {
     font-family: "Sedan SC", serif;
     font-size: 30px;
     text-shadow: 2px 2px 5px black;
-    color: var(--Headline);
+    color: var(--headline);
 }
-.check_box{
+
+.check_box {
     padding: 10px;
 }
-.check_box label{
-    background-color: rgba(0, 0, 0, 0,2);
+
+.check_box label {
+    background-color: rgba(0, 0, 0, 0.2);
 }
-.check_box input{
-   width: 25px;
-   height: 25px;
+
+.check_box input {
+    width: 25px;
+    height: 25px;
 }
-.year_selection select{
+
+.year_selection select {
     height: 25px;
     width: 80px;
 }
 
-/*Effect modify*/
-#effect_text{
+/* Effect modify */
+#effect_text {
     margin-left: 50px;
 }
 
-
-
-/*Footer*/
-footer{
-    height: 225px;
-    width: 100%;
-    background-color: var(--nav-background);
+/* Timeline styles */
+.timeline-container {
+    text-align: center;
 }
-.footer_logo{
+
+.timeline-header {
+    background-color: #80B640; /* Light green header */
+    color: #333; /* Darker text for contrast */
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.event {
+    background-color: #002A00; /* Darker green box */
+    color: #C0FF74; /* Light green text */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 150px;
+    text-align: center;
+}
+
+.event-year {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.event-name {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.event-info {
+    background-color: #80B640; /* Light green circle */
+    color: #002A00; /* Darker green text */
+    font-size: 1.2em;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.event-info:hover {
+    background-color: #C0FF74; /* Lighter green on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--nav-background);
+    width: 100vw;
+    height: 225px;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.footer_logo {
     width: 225px;
     height: 225px;
 }
-.footer_link{
+
+.footer_link {
     padding-top: 75px;
 }
