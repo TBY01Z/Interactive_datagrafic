@@ -19,6 +19,7 @@ body{
 }
 header{
     height: 100px;
+    width: 100%;
     background-color: var(--nav-background);
 }
 nav{
@@ -148,7 +149,7 @@ label{
 
 /*Footer*/
 footer{
-    height: 218px;
+    height: 225px;
     width: 100%;
     background-color: var(--nav-background);
 }
