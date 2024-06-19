@@ -149,7 +149,7 @@ label{
 /*Footer*/
 footer{
     height: 218px;
-    width: 100vw;
+    width: 100%;
     background-color: var(--nav-background);
 }
 .footer_logo{
